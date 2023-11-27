@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Adventskalender</title>
+    <link rel="stylesheet" href="adventskalender.css">
+
+    <script type="module">
+
+        const currentDate = new Date();
+        const openingDate = new Date("2023-12-01");
+        const allDoors = document.querySelectorAll(".door");
+
+
+        allDoors.forEach(function (door, index) {
+            const doorDate = new Date(openingDate);
+            doorDate.setDate(doorDate.getDate() + index);
+
+            door.addEventListener("click", function () {
+                if (currentDate <= doorDate) {
+                    alert("Tür geöffnet!");
+                    door.innerHTML = `Heute ist der ${index + 1}. Tag!`;
+                }
+                else {
+                    door.addEventListener("click", () => {
+                        alert("Diese Tür ist noch nicht verfügbar!")
+                    })
+                }
+            })
+        });
+
+
+
+    </script>
+</head>
+<body>
+<h1>Adventskalender</h1>
+<div class="container">
+    <div class="row">
+        <div class="door" id="door1">Tür 1</div>
+        <div class="door" id="door2">Tür 2</div>
+        <div class="door" id="door3">Tür 3</div>
+        <div class="door" id="door4">Tür 4</div>
+        <div class="door" id="door5">Tür 5</div>
+        <div class="door" id="door6">Tür 6</div>
+    </div>
+    <div class="row">
+        <div class="door" id="door7">Tür 7</div>
+        <div class="door" id="door8">Tür 8</div>
+        <div class="door" id="door9">Tür 9</div>
+        <div class="door" id="door10">Tür 10</div>
+        <div class="door" id="door11">Tür 11</div>
+        <div class="door" id="door12">Tür 12</div>
+    </div>
+    <div class="row">
+        <div class="door" id="door13">Tür 13</div>
+        <div class="door" id="door14">Tür 14</div>
+        <div class="door" id="door15">Tür 15</div>
+        <div class="door" id="door16">Tür 16</div>
+        <div class="door" id="door17">Tür 17</div>
+        <div class="door" id="door18">Tür 18</div>
+    </div>
+    <div class="row">
+        <div class="door" id="door19">Tür 19</div>
+        <div class="door" id="door20">Tür 20</div>
+        <div class="door" id="door21">Tür 21</div>
+        <div class="door" id="door22">Tür 22</div>
+        <div class="door" id="door23">Tür 23</div>
+        <div class="door" id="door24">Tür 24</div>
+    </div>
+</div>
+</body>
+</html>

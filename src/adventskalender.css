@@ -1,0 +1,29 @@
+body {
+    background-color: black;
+}
+
+h1 {
+    text-align: center;
+    color: darkred;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.door {
+    flex: 1;
+    background-color: cornflowerblue;
+    border: 1px solid seagreen;
+    text-align: center;
+    padding: 20px;
+    margin: 3px;
+}
