@@ -3,6 +3,41 @@ body {
     overflow: hidden;
     margin: 0;
     position: relative;
+    font-family: "Lucida Fax"
+}
+
+h1 {
+    text-align: center;
+    padding: 5px;
+    color: darkred;
+    border: 2px solid;
+    border-radius: 5px;
+    background-color: darkorange;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.door {
+    flex: 1;
+    background-color: cornflowerblue;
+    border: 1px solid orangered;
+    border-radius: 5px;
+    text-align: center;
+    padding: 20px;
+    margin: 10px ; /* Center horizontally */
+    width: 60%; /* Set the width to 60% of the container */
+    min-width: 10rem;
 }
 
 .snowflake {
@@ -21,35 +56,4 @@ body {
     100% {
         transform: translateY(100vh);
     }
-}
-
-h1 {
-    text-align: center;
-    color: darkred;
-    border: 2px solid;
-    border-radius: 5px;
-    background-color: darkorange;
-
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.row {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-}
-
-.door {
-    flex: 1;
-    background-color: cornflowerblue;
-    border: 1px solid orangered;
-    border-radius: 5px;
-    text-align: center;
-    padding: 20px;
-    margin: 3px;
 }

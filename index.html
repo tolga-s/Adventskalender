@@ -14,7 +14,6 @@
         const openingDate = new Date("2023-12-01");
         const allDoors = document.querySelectorAll(".door");
 
-
         allDoors.forEach(function (door, index) {
             const doorDate = new Date(openingDate);
             doorDate.setDate(doorDate.getDate() + index);
