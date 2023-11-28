@@ -1,10 +1,35 @@
 body {
-    background-color: black;
+    background-image: linear-gradient(to bottom right, darkblue, darkgreen);
+    overflow: hidden;
+    margin: 0;
+    position: relative;
+}
+
+.snowflake {
+    position: absolute;
+    color: #fff;
+    font-size: 20px;
+    z-index: -1; /* Set a lower z-index to place snowflakes behind other elements */
+    pointer-events: none; /* Allows clicks to go through snowflakes to the underlying elements */
+    animation: snowfall linear infinite;
+}
+
+@keyframes snowfall {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
 }
 
 h1 {
     text-align: center;
     color: darkred;
+    border: 2px solid;
+    border-radius: 5px;
+    background-color: darkorange;
+
 }
 
 .container {
@@ -22,7 +47,8 @@ h1 {
 .door {
     flex: 1;
     background-color: cornflowerblue;
-    border: 1px solid seagreen;
+    border: 1px solid orangered;
+    border-radius: 5px;
     text-align: center;
     padding: 20px;
     margin: 3px;
