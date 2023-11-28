@@ -1,18 +1,17 @@
 body {
-    background-image: linear-gradient(to bottom right, darkblue, darkgreen);
+    background-image: linear-gradient(to bottom right, darkblue, lightseagreen);
     overflow: hidden;
-    margin: 0;
     position: relative;
-    font-family: "Lucida Fax", serif;
+    font-family: Dubai, serif;
+    font-size: 1.3rem;
+    color: white;
+    height: 100vh;
 }
 
 h1 {
     text-align: center;
     padding: 5px;
-    color: darkred;
-    border: 2px solid;
-    border-radius: 5px;
-    background-color: darkorange;
+    color: darkcyan;
 }
 
 .container {
@@ -30,18 +29,20 @@ h1 {
 
 .door {
     flex: 1;
-    background-color: cornflowerblue;
-    border: 1px solid orangered;
+    border: 1px solid darkcyan;
     border-radius: 5px;
     text-align: center;
     padding: 20px;
     margin: 10px; /* Center horizontally */
     min-width: 10rem;
-    min-height: 5rem;
+}
+
+.door:hover {
+    background-color: #b99000;
 }
 
 .revealed {
-    background-color: orange;
+    background-color: #b99000;
 }
 
 .snowflake {
