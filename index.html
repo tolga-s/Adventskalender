@@ -60,26 +60,26 @@
             })
         });
 
-        function createSnowflake() {
-            const snowflake = document.createElement("div");
-            snowflake.className = "snowflake";
-            snowflake.innerHTML = "❄";
+        function createSnowflakes() {
+            const snowflakes = document.createElement("div");
+            snowflakes.className = "snowflake";
+            snowflakes.innerHTML = "❄";
 
-            const body = document.querySelector(".body");
-            body.appendChild(snowflake);
+            const body = document.querySelector("body");
+            body.appendChild(snowflakes);
 
             const start = Math.random() * window.innerWidth;
 
-            body.style.left = start + "px";
-            body.style.animationDuration = Math.random() * 3 + 2 + "s";
-            body.style.opacity = Math.random();
+            snowflakes.style.left = start + "px";
+            snowflakes.style.animationDuration = Math.random() * 3 + 2 + "s";
+            snowflakes.style.opacity = Math.random();
 
             setTimeout(() => {
-                snowflake.remove()
+                snowflakes.remove();
             }, 5000);
         }
 
-        setInterval(createSnowflake, 100);
+        setInterval(createSnowflakes, 100);
 
     </script>
 </head>
