@@ -50,7 +50,7 @@
             doorDate.setDate(doorDate.getDate() + index);
 
             door.addEventListener("click", function () {
-                if (currentDate <= doorDate) {
+                if (currentDate >= doorDate) {
                     swal("Tür geöffnet!");
                     door.innerHTML = doorContents[index];
                     door.classList.add("revealed");
