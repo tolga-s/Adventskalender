@@ -1,17 +1,16 @@
 body {
-    background-image: linear-gradient(to bottom right, darkblue, lightseagreen);
-    overflow: hidden;
+    background-image: linear-gradient(to bottom right, #050528, lightseagreen);
     position: relative;
     font-family: Dubai, serif;
     font-size: 1.3rem;
     color: white;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 h1 {
     text-align: center;
     padding: 5px;
-    color: darkcyan;
+    color: #10bdbd;
 }
 
 .container {
@@ -23,6 +22,7 @@ h1 {
 
 .row {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin: 10px;
 }
@@ -31,10 +31,11 @@ h1 {
     flex: 1;
     border: 1px solid darkcyan;
     border-radius: 5px;
+    background-color: seagreen;
     text-align: center;
     padding: 20px;
     margin: 10px; /* Center horizontally */
-    min-width: 10rem;
+    min-width: 15rem;
 }
 
 .door:hover {
@@ -42,16 +43,17 @@ h1 {
 }
 
 .revealed {
-    background-color: #b99000;
+    background-color: rgba(185, 144, 0, 0.98);
 }
 
 .snowflake {
-    position: absolute;
+    position: fixed;
     color: #fff;
     font-size: 20px;
     z-index: -1; /* Set a lower z-index to place snowflakes behind other elements */
     pointer-events: none; /* Allows clicks to go through snowflakes to the underlying elements */
     animation: snowfall linear infinite;
+    top: -10px;
 }
 
 @keyframes snowfall {
