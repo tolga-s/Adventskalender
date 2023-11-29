@@ -14,7 +14,7 @@
 
         // Setting date properties
         const currentDate = new Date();
-        const openingDate = new Date("2023-11-25");
+        const openingDate = new Date("2023-12-01");
         const allDoors = document.querySelectorAll(".door");
 
         // Content for each door
@@ -50,7 +50,7 @@
             doorDate.setDate(doorDate.getDate() + index);
 
             door.addEventListener("click", function () {
-                if (currentDate >= doorDate) {
+                if (currentDate <= doorDate) {
                     swal("Tür geöffnet!");
                     door.innerHTML = doorContents[index];
                     door.classList.add("revealed");
@@ -80,26 +80,6 @@
         }
 
         setInterval(createSnowflake, 100);
-        function createSnowflakes() {
-            const snowflakes = document.createElement("div");
-            snowflakes.className = "snowflake";
-            snowflakes.innerHTML = "❄";
-
-            const body = document.querySelector("body");
-            body.appendChild(snowflakes);
-
-            const start = Math.random() * window.innerWidth;
-
-            snowflakes.style.left = start + "px";
-            snowflakes.style.animationDuration = Math.random() * 3 + 2 + "s";
-            snowflakes.style.opacity = Math.random();
-
-            setTimeout(() => {
-                snowflakes.remove();
-            }, 5000);
-        }
-
-        setInterval(createSnowflakes, 100);
 
     </script>
 </head>
