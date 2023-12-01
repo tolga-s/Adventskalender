@@ -12,6 +12,54 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script type="module">
 
+        // Setting date properties
+        const currentDate = new Date();
+        const openingDate = new Date("2023-12-01");
+        const allDoors = document.querySelectorAll(".door");
+
+        // Content for each door
+        const doorContents = [
+            "Why does Santa go down the chimney on Christmas Eve? Because it soots him!",
+            "What do snowmen eat for breakfast? Frosted Flakes!",
+            "Why did the ornament go to school? Because it wanted to be a little brighter!",
+            "What do you get if you cross a snowman and a dog? Frostbite!",
+            "Why was the snowman looking through the carrots? He was picking his nose!",
+            "What do you call a snowman with a six-pack? An abdominal snowman!",
+            "How does a snowman get around? By riding an 'icicle'!",
+            "Why did the snowman call the police? There was a flurry of stolen snowflakes!",
+            "What do snowmen wear on their heads? Ice caps!",
+            "Why was the snowman rummaging in the bag of carrots? He was picking his nose!",
+            "What do snowmen do on weekends? Chill out!",
+            "Why did the snowman bring a broom to the party? To sweep the ladies off their feet!",
+            "What does a snowman take when it gets sick? A chill pill!",
+            "What happened when the snowwoman got angry at the snowman? She gave him the cold shoulder!",
+            "What's a snowman's favorite breakfast cereal? Frosted Snowflakes!",
+            "How does a snowman get to work? By riding an 'icicle' bus!",
+            "Why was the snowman looking through the carrots? He was trying to find his 'snow-nose'!",
+            "What's a snowman's favorite dessert? Ice cream, of course!",
+            "How do snowmen travel around? By riding an 'icicle' train!",
+            "Why did the snowman bring a carrot to the party? He heard they were having a 'snowball' fight!",
+            "What happened to the snowman who had a fight with his wife? She gave him the cold shoulder!",
+            "Why did the snowman put his hand in the blender? Because he wanted snowflakes!",
+            "What did one snowman say to the other? 'Do you smell carrots too?'",
+            "Why did the snowman go to school? To improve his 'cool-age'!"
+        ]
+
+        allDoors.forEach(function (door, index) {
+            const doorDate = new Date(openingDate);
+            doorDate.setDate(doorDate.getDate() + index);
+
+            door.addEventListener("click", function () {
+                if (currentDate >= doorDate) {
+                    swal("Tür geöffnet!");
+                    door.innerHTML = doorContents[index];
+                    door.classList.add("revealed");
+                } else {
+                    swal("Diese Tür ist noch nicht verfügbar!", `Komm am ${doorDate.getDate()}.12.2023 nochmal vorbei.`)
+                }
+            })
+        });
+
         function createSnowflakes() {
             const snowflakes = document.createElement("div");
             snowflakes.className = "snowflake";
@@ -42,22 +90,48 @@
 
         setInterval(createSnowflakes, 200);
 
-        // Um die Musik zu stoppen:
-        document.getElementById('backgroundMusic').pause();
-
-        // Um die Musik wieder abzuspielen:
-        document.getElementById('backgroundMusic').play();
-
     </script>
 </head>
 <body>
-<h1>Der liebe Fatih</h1>
+<h1>Fatih, der perfekte (hypothetische) Schwiegersohn</h1>
 
 <audio id="backgroundMusic" autoplay loop>
     <source src="musik.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
 </audio>
 <div class="container">
+<!--    <div class="row">-->
+<!--        <div class="door" id="door1">1</div>-->
+<!--        <div class="door" id="door2">2</div>-->
+<!--        <div class="door" id="door3">3</div>-->
+<!--        <div class="door" id="door4">4</div>-->
+<!--        <div class="door" id="door5">5</div>-->
+<!--        <div class="door" id="door6">6</div>-->
+<!--    </div>-->
+<!--    <div class="row">-->
+<!--        <div class="door" id="door7">7</div>-->
+<!--        <div class="door" id="door8">8</div>-->
+<!--        <div class="door" id="door9">9</div>-->
+<!--        <div class="door" id="door10">10</div>-->
+<!--        <div class="door" id="door11">11</div>-->
+<!--        <div class="door" id="door12">12</div>-->
+<!--    </div>-->
+<!--    <div class="row">-->
+<!--        <div class="door" id="door13">13</div>-->
+<!--        <div class="door" id="door14">14</div>-->
+<!--        <div class="door" id="door15">15</div>-->
+<!--        <div class="door" id="door16">16</div>-->
+<!--        <div class="door" id="door17">17</div>-->
+<!--        <div class="door" id="door18">18</div>-->
+<!--    </div>-->
+<!--    <div class="row">-->
+<!--        <div class="door" id="door19">19</div>-->
+<!--        <div class="door" id="door20">20</div>-->
+<!--        <div class="door" id="door21">21</div>-->
+<!--        <div class="door" id="door22">22</div>-->
+<!--        <div class="door" id="door23">23</div>-->
+<!--        <div class="door" id="door24">24</div>-->
+<!--    </div>-->
 </div>
 </body>
 </html>

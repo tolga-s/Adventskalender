@@ -9,6 +9,7 @@ body {
 
 h1 {
     text-align: center;
+    align-items: center;
     padding: 5px;
     color: red;
 }
