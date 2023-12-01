@@ -1,5 +1,5 @@
 body {
-    background-image: linear-gradient(to bottom right, #050528, lightseagreen);
+    background-image: linear-gradient(to bottom right, lightcoral, #eec2c2);
     position: relative;
     font-family: Dubai, serif;
     font-size: 1.3rem;
@@ -10,7 +10,7 @@ body {
 h1 {
     text-align: center;
     padding: 5px;
-    color: #10bdbd;
+    color: red;
 }
 
 .container {
