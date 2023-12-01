@@ -63,7 +63,16 @@
         function createSnowflakes() {
             const snowflakes = document.createElement("div");
             snowflakes.className = "snowflake";
-            snowflakes.innerHTML = "❄";
+            // snowflakes.innerHTML = "❄";
+
+            const img = document.createElement("img");
+            img.src = "fatih.jpg";
+            img.alt = "";
+            img.style.width = "50px"
+            img.style.height = "50px"
+            img.style.borderRadius = "50px"
+
+            snowflakes.appendChild(img)
 
             const body = document.querySelector("body");
             body.appendChild(snowflakes);
