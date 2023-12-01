@@ -90,9 +90,17 @@
 
         setInterval(createSnowflakes, 200);
 
+        let musicOn = false;
         function playMusic() {
             const music = document.getElementById('backgroundMusic');
-            music.play();
+
+            if (musicOn) {
+                music.pause();
+                musicOn = false;
+            } else {
+                music.play();
+                musicOn = true;
+            }
         }
 
         document.getElementById('playButton').addEventListener('click', playMusic);
