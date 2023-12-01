@@ -68,8 +68,8 @@
             const img = document.createElement("img");
             img.src = "fatih.jpg";
             img.alt = "";
-            img.style.width = "100px"
-            img.style.height = "100px"
+            img.style.width = "150"
+            img.style.height = "150px"
             img.style.borderRadius = "50px"
 
             snowflakes.appendChild(img)
@@ -90,16 +90,25 @@
 
         setInterval(createSnowflakes, 200);
 
+        function playMusic() {
+            const music = document.getElementById('backgroundMusic');
+            music.play();
+        }
+
+        document.getElementById('playButton').addEventListener('click', playMusic);
+
     </script>
 </head>
 <body>
-<h1>Fatih, der perfekte (hypothetische) Schwiegersohn</h1>
 
-<audio id="backgroundMusic" autoplay loop>
-    <source src="musik.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-</audio>
 <div class="container">
+    <h1>Fatih, der perfekte (hypothetische) Schwiegersohn</h1>
+    <button id="playButton">Klick mich!</button>
+
+    <audio id="backgroundMusic" autoplay loop>
+        <source src="musik.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
 <!--    <div class="row">-->
 <!--        <div class="door" id="door1">1</div>-->
 <!--        <div class="door" id="door2">2</div>-->

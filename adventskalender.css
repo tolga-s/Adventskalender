@@ -9,9 +9,12 @@ body {
 
 h1 {
     text-align: center;
+    border: 1px solid;
+    border-radius: 30px;
+    background-color: lightcoral;
     align-items: center;
     padding: 5px;
-    color: red;
+    color: darkred;
 }
 
 .container {
@@ -64,4 +67,19 @@ h1 {
     100% {
         transform: translateY(100vh);
     }
+}
+
+#playButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: darkred;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.1s ease;
+}
+
+#playButton:hover {
+    background-color: #d32d2d;
 }
